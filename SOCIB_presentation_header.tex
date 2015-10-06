@@ -1,0 +1,151 @@
+\documentclass[final,xcolor=pdftex,table,14pt,svgnames]{beamer}
+
+\usefonttheme{professionalfonts}
+\setbeamercovered{invisible}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{times}
+%\usepackage[sfdefault]{carlito}
+\usepackage{shadowtext}
+\usepackage{booktabs}
+\usepackage{animate}
+\usepackage{enumitem}
+\usepackage[framemethod=tikz]{mdframed}
+
+\usepackage{pifont}
+
+\usetikzlibrary{arrows,shapes,backgrounds}
+\tikzstyle{every picture}+=[remember picture]
+\tikzstyle{na} = [baseline=-.5ex]
+
+\DeclareGraphicsExtensions{.JPG,.jpg,.pdf,.png,.PNG,.jpeg}
+\graphicspath{
+{/home/ctroupin/Presentations/figures4presentations/icons/},
+{/home/ctroupin/Presentations/figures4presentations/},
+{/home/ctroupin/Presentations/figures4presentations/logo/},
+{/home/ctroupin/Presentations/figures4presentations/app/},
+{/home/ctroupin/Presentations/figures4presentations/lw4nc2/},
+{/home/ctroupin/Presentations/figures4presentations/dapp/},
+{/home/ctroupin/Pictures/Screenshots/20150503/},
+{/home/ctroupin/Pictures/Screenshots/20150503/seaboard/}
+}
+
+\definecolor{bluesocib}{RGB}{66,175,182}  	% blue 
+%\definecolor{blacksocib}{RGB}{17,31,47} 		% black	 
+\definecolor{blacksocib}{RGB}{1,1,1}
+\definecolor{redsocib}{RGB}{255,102,0}			% red - orange
+\definecolor{arrowcolor}{RGB}{255,220,63}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{title}{fg=bluesocib,bg=black}
+\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{normal text}{bg=blacksocib,fg=white}
+\setbeamercolor{frametitle}{fg=bluesocib}
+\setbeamertemplate{frametitle}{\insertframetitle\par\vskip-6pt\hrulefill}
+
+\setbeamercolor{institute}{fg=bluesocib}
+\setbeamercolor{structure}{bg=black,fg=blacksocib}
+\setbeamercolor{item projected}{fg=blacksocib,bg=white}
+\setbeamercolor{item}{bg=black,fg=bluesocib}
+
+\setbeamersize{text margin left=1cm}
+\setbeamercolor{description item}{fg=bluesocib}
+
+
+\setbeamercolor{block}{fg=white}
+\setbeamerfont{block title}{size=\small}
+\setbeamerfont{block body}{size=\tiny}
+
+\setbeamertemplate{items}[triangle] 
+%\setbeamercovered{uncover}
+
+\parskip 0.25cm
+
+
+%\logo{
+%\includegraphics[height=0.5cm]{logo_socib_small}
+%}
+
+%--------------------------------
+%pdfpagemode=FullScreen,
+\hypersetup{bookmarksopen=true,
+bookmarksnumbered=true,  
+pdffitwindow=true, 
+pdfstartview=Fit,
+%pdfpagemode=FullScreen,
+pdffitwindow=true,
+pdftoolbar=true,
+pdfmenubar=true,
+pdfwindowui=true,
+pdfauthor={Charles Troupin},
+pdftitle={Data management and applications at SOCIB data centre},
+pdfsubject={International Liege Colloquium on Ocean Dynamics},
+bookmarksopenlevel=0,
+colorlinks=true,
+linkcolor=blue,anchorcolor=black,%
+citecolor=blue,filecolor=black,%
+menucolor=black,urlcolor=white,%
+pdfpageduration=1,%
+}
+
+\newcommand{\subsecnum}[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{black}{#1}};}}
+            
+\NewDocumentEnvironment{vertline}{O{0.25em} O{-1cm} O{white}}%
+  {% \begin{coderule}[<rule width>][<rule sep>][<rule colour>]  
+    \begin{mdframed}%
+      [topline=false,rightline=false,bottomline=false,%
+       innertopmargin=0pt,innerrightmargin=0pt,innerbottommargin=0pt,%
+       skipabove=0\parskip,skipbelow=0.\baselineskip,%
+       innerleftmargin=#2,outerlinewidth=#1,linecolor=#3,backgroundcolor=blacksocib]
+  }
+  {\end{mdframed}}% \end{coderule}
+  
+
+\newenvironment{enumline}{
+	\begin{vertline}\begin{enumerate}[label=---\protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+}{
+	\end{enumerate}\end{vertline}
+}
+
+\newenvironment{enumlineB}{
+	\begin{vertline}\begin{enumerate}[label=---\protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+}{
+	\end{enumerate}\end{vertline}
+}
+
+\newcommand{\topline}{%
+  \tikz[remember picture,overlay] {%
+    \draw[bluesocib] ([yshift=0cm]current page.north west)
+             -- ([yshift=-1cm,xshift=\paperwidth]current page.north west);}}
+
+
+\newcommand{\refe}{\textcolor{bluesocib}}
+\newcommand{\important}{\textcolor{bluesocib}}
+\newcommand{\importantm}[1]{\textcolor{yellow}{\mathbf{#1}}}
+\newcommand{\fleche}{\hspace*{.15cm}$\rightarrow$\hspace*{.15cm}}
+\newcommand{\comment}[1]{\textcolor{lightgray}{\scriptsize{#1}}}
+\newcommand{\comments}[1]{\hfill\textcolor{lightgray}{\scriptsize{#1}}}
+
+\defbeamertemplate*{footline}{}
+{%
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=4.0ex,dp=1.125ex,leftskip=1cm]{}%
+    \usebeamerfont{institute}{\scriptsize Mallorca, {\insertdate}}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=4.0ex,dp=1.5ex,leftskip=1cm]{}%
+    \usebeamerfont{institute}{\scriptsize \it \insertshortdate}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
