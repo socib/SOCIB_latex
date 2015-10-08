@@ -1,24 +1,22 @@
-\documentclass[final,xcolor=pdftex,table,14pt,svgnames]{beamer}
+\documentclass[final,table,svgnames]{beamer}
 
-\usefonttheme{professionalfonts}
+
+\usepackage{fontspec}
+\setmainfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
+\setsansfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
+
 \setbeamercovered{invisible}
 
 \usepackage[english]{babel}
-\usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{amsmath,amsfonts}
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{float}
 \usepackage{url}
 \usepackage{tikz}
 \usepackage{wasysym}
 \usepackage{marvosym}
-\usepackage{times}
-%\usepackage[sfdefault]{carlito}
 \usepackage{shadowtext}
-\usepackage{booktabs}
 \usepackage{animate}
 \usepackage{enumitem}
 \usepackage[framemethod=tikz]{mdframed}
@@ -29,27 +27,18 @@
 \tikzstyle{every picture}+=[remember picture]
 \tikzstyle{na} = [baseline=-.5ex]
 
-\DeclareGraphicsExtensions{.JPG,.jpg,.pdf,.png,.PNG,.jpeg}
+\DeclareGraphicsExtensions{.png,.PNG,.JPG,.jpg,.pdf,,.jpeg}
 \graphicspath{
-{/home/ctroupin/Presentations/figures4presentations/icons/},
-{/home/ctroupin/Presentations/figures4presentations/},
-{/home/ctroupin/Presentations/figures4presentations/logo/},
-{/home/ctroupin/Presentations/figures4presentations/app/},
-{/home/ctroupin/Presentations/figures4presentations/lw4nc2/},
-{/home/ctroupin/Presentations/figures4presentations/dapp/},
-{/home/ctroupin/Pictures/Screenshots/20150503/},
-{/home/ctroupin/Pictures/Screenshots/20150503/seaboard/}
 }
 
 \definecolor{bluesocib}{RGB}{66,175,182}  	% blue 
-%\definecolor{blacksocib}{RGB}{17,31,47} 		% black	 
-\definecolor{blacksocib}{RGB}{1,1,1}
+\definecolor{blacksocib}{RGB}{18,32,47}
 \definecolor{redsocib}{RGB}{255,102,0}			% red - orange
 \definecolor{arrowcolor}{RGB}{255,220,63}
 
 \setbeamertemplate{navigation symbols}{}
-\setbeamercolor{title}{fg=bluesocib,bg=black}
-\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{title}{fg=bluesocib,bg=blacksocib}
+\setbeamercolor{background canvas}{bg=blacksocib}
 \setbeamercolor{normal text}{bg=blacksocib,fg=white}
 \setbeamercolor{frametitle}{fg=bluesocib}
 \setbeamertemplate{frametitle}{\insertframetitle\par\vskip-6pt\hrulefill}
@@ -64,8 +53,8 @@
 
 
 \setbeamercolor{block}{fg=white}
-\setbeamerfont{block title}{size=\small}
-\setbeamerfont{block body}{size=\tiny}
+%\setbeamerfont{block title}{size=\small}
+%\setbeamerfont{block body}{size=\tiny}
 
 \setbeamertemplate{items}[triangle] 
 %\setbeamercovered{uncover}
@@ -141,11 +130,27 @@ pdfpageduration=1,%
 \defbeamertemplate*{footline}{}
 {%
   \leavevmode%
-  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=4.0ex,dp=1.125ex,leftskip=1cm]{}%
-    \usebeamerfont{institute}{\scriptsize Mallorca, {\insertdate}}
+  \hbox{\begin{beamercolorbox}[wd=.3333\paperwidth,dp=2.5ex,ht=4.0ex]{}%
+    \usebeamerfont{institute}{ }
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.5\paperwidth,ht=4.0ex,dp=1.5ex,leftskip=1cm]{}%
-    \usebeamerfont{institute}{\scriptsize \it \insertshortdate}
+  \begin{beamercolorbox}[wd=.33333\paperwidth,dp=2.5ex,center]{}%
+    \usebeamerfont{institute}{\tiny {\insertdate}}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.33333\paperwidth,dp=2.5ex,right,rightskip=1cm]{}%
+    \usebeamerfont{institute}{\tiny {www.socib.es}}
   \end{beamercolorbox}}%
   \vskip0pt%
 }
+
+\addtobeamertemplate{background}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=-2pt] at (current page.north east) {\includegraphics[height=0.8cm]{logo_socib_square}};
+\end{tikzpicture}}
+
+\addtobeamertemplate{background}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,yshift=-2pt] at (current page.north west) {\includegraphics[height=0.5cm]{logo_socib_short}};
+\end{tikzpicture}}
+
+\addtobeamertemplate{frametitle}{\vspace*{1cm}}
+
