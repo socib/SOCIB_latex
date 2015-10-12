@@ -6,7 +6,7 @@ The .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki
 
 * ''SOCIB_presentation.tex'' is the template for a presentation. This file contains a basic example.
 * ''beamerthemeSOCIB.sty'' is where all the configuration for the style is done.
-* 
+
 ## Poster
 
 Coming soon
