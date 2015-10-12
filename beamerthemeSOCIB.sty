@@ -13,43 +13,54 @@
 \tikzstyle{every picture}+=[remember picture]
 \tikzstyle{na} = [baseline=-.5ex]
 
-\DeclareGraphicsExtensions{.png,.PNG,.JPG,.jpg,.pdf,,.jpeg}
-\graphicspath{
-}
-
-\definecolor{bluesocib}{RGB}{66,175,182}  	% blue 
+% Define new colors using RGB code
+\definecolor{bluesocib}{RGB}{66,175,182}  	
 \definecolor{blacksocib}{RGB}{18,32,47}
-\definecolor{redsocib}{RGB}{255,102,0}			% red - orange
+\definecolor{redsocib}{RGB}{255,102,0}			
 \definecolor{arrowcolor}{RGB}{255,220,63}
 
-\setbeamertemplate{navigation symbols}{}
+% Set color for each element
 \setbeamercolor{title}{fg=bluesocib,bg=blacksocib}
 \setbeamercolor{background canvas}{bg=blacksocib}
 \setbeamercolor{normal text}{bg=blacksocib,fg=white}
 \setbeamercolor{frametitle}{fg=bluesocib}
 \setbeamercolor{date}{fg=bluesocib,bg=blacksocib}
-
-\setbeamertemplate{frametitle}{\insertframetitle\par\vskip-6pt\hrulefill}
-
 \setbeamercolor{institute}{fg=bluesocib}
 \setbeamercolor{structure}{bg=black,fg=blacksocib}
 \setbeamercolor{item projected}{fg=blacksocib,bg=white}
 \setbeamercolor{item}{bg=black,fg=bluesocib}
-
-\setbeamersize{text margin left=1cm}
 \setbeamercolor{description item}{fg=bluesocib}
-
-
 \setbeamercolor{block}{fg=white}
-\setbeamerfont{frametitle}{size=\huge,series=\itshape}
 
+% Set size for the frame title (if larger, use \huge)
+\setbeamerfont{frametitle}{size=\LARGE}
 
+% Remove navigation symbol
+\setbeamertemplate{navigation symbols}{}
+
+% Add line below title and space above it
+\setbeamertemplate{frametitle}{\insertframetitle\par\vskip-6pt\hrulefill}
+\addtobeamertemplate{frametitle}{\vspace*{.5cm}}
+
+% Add logos in the left and right corners
+\addtobeamertemplate{background}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=-2pt] at (current page.north east) {\includegraphics[height=0.5cm]{logo_socib_square}};
+\end{tikzpicture}}
+
+\addtobeamertemplate{background}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,yshift=-2pt] at (current page.north west) {\includegraphics[height=0.35cm]{logo_socib_short}};
+\end{tikzpicture}}
+
+% Other elements of the template
+\setbeamersize{text margin left=1cm}
 \setbeamertemplate{items}[triangle] 
-%\setbeamercovered{uncover}
 
 \newcommand{\subsecnum}[1]{\tikz[baseline=(char.base)]{%
             \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{black}{#1}};}}
-            
+
+% Create new environments for the enumeration            
 \NewDocumentEnvironment{vertline}{O{0.25em} O{-1cm} O{white}}%
   {% \begin{coderule}[<rule width>][<rule sep>][<rule colour>]  
     \begin{mdframed}%
@@ -73,11 +84,7 @@
 	\end{enumerate}\end{vertline}
 }
 
-\newcommand{\topline}{%
-  \tikz[remember picture,overlay] {%
-    \draw[bluesocib] ([yshift=0cm]current page.north west)
-             -- ([yshift=-1cm,xshift=\paperwidth]current page.north west);}}
-
+% Define the footline : date at center and www.socib.es on the right side
 \defbeamertemplate*{footline}{}
 {%
   \leavevmode%
@@ -92,20 +99,6 @@
   \end{beamercolorbox}}%
   \vskip0pt%
 }
-
-\addtobeamertemplate{background}{}{%
-\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north east,yshift=-2pt] at (current page.north east) {\includegraphics[height=0.5cm]{logo_socib_square}};
-\end{tikzpicture}}
-
-\addtobeamertemplate{background}{}{%
-\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,yshift=-2pt] at (current page.north west) {\includegraphics[height=0.35cm]{logo_socib_short2}};
-\end{tikzpicture}}
-
-\addtobeamertemplate{frametitle}{\vspace*{1cm}}
-
-
 
 \mode
 <all>

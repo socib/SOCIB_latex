@@ -28,31 +28,26 @@ citecolor=blue,filecolor=black,%
 menucolor=black,urlcolor=white
 }
 
-
-%\input{SOCIB_presentation_header.tex}
-\parindent 0cm
-
 \author[Short author list]{Author list}
 \institute[SOCIB]{Balearic Islands Coastal Observing and Forecasting System}
-%\url{www.socib.es}
-\date[\today]{}  
-  
 \title[Short title]{Long title}
+\date[\today]{}  
 
 \usetheme{SOCIB}
+
+\DeclareGraphicsExtensions{.png,.PNG,.JPG,.jpg,.pdf,,.jpeg}
+\graphicspath{
+}
 
 
 \begin{document}
 
 
 {
-%\usebackgroundtemplate{\hspace{-1cm}\tikz\node[opacity=0.2]{\includegraphics[width=1.1\paperwidth]{background5.png}};}
 \begin{frame}
 
-\vspace*{-1.3pt}
-
 \begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,yshift=-2pt] at (current page.north west) {\includegraphics[height=0.35cm]{logo_socib_long}};
+\node[anchor=north west,yshift=-.5pt,xshift=-3pt] at (current page.north west) {\includegraphics[height=0.45cm]{logo_socib_long}};
 \end{tikzpicture}
 
 \centering
