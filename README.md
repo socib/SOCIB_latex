@@ -1,6 +1,6 @@
 # SOCIB template latex
 LaTeX source files for posters and presentations, following examples provided in ppt.
-The .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki/XeTeX) in order to get the same font as in the ppt ('''FF Cube''')
+The .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki/XeTeX) in order to get the same font as in the ppt ('''FF Cube''').
 
 ## Presentation 
 
@@ -9,4 +9,4 @@ The .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki
 
 ## Poster
 
-Coming soon
+Coming soon!
