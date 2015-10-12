@@ -1,9 +1,9 @@
 # SOCIB template latex
 LaTeX source files for posters and presentations, following examples provided in ppt.
 
-The .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki/XeTeX) in order to get the same font as in the ppt ('''FF Cube'''). 
+The .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki/XeTeX) in order to get the same font as in the ppt (_FF Cube_). 
 
-The FF Cube font has to be installed ('''Cube-Regular.ttf''' or _Cube-Regular2.otf_) in ~/.fonts directory.
+The FF Cube font has to be installed (_Cube-Regular.ttf_ or _Cube-Regular2.otf_) in ~/.fonts directory.
 
 ## Presentation 
 
