@@ -24,7 +24,7 @@
 \setbeamercolor{background canvas}{bg=blacksocib}
 \setbeamercolor{normal text}{bg=blacksocib,fg=white}
 \setbeamercolor{frametitle}{fg=bluesocib}
-\setbeamercolor{date}{fg=bluesocib,bg=blacksocib}
+\setbeamercolor{date}{fg=bluesocib}
 \setbeamercolor{institute}{fg=bluesocib}
 \setbeamercolor{structure}{bg=black,fg=blacksocib}
 \setbeamercolor{item projected}{fg=blacksocib,bg=white}
@@ -58,7 +58,7 @@
 \setbeamertemplate{items}[triangle] 
 
 \newcommand{\subsecnum}[1]{\tikz[baseline=(char.base)]{%
-            \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{black}{#1}};}}
+            \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{blacksocib}{#1}};}}
 
 % Create new environments for the enumeration            
 \NewDocumentEnvironment{vertline}{O{0.25em} O{-1cm} O{white}}%
@@ -73,13 +73,14 @@
   
 
 \newenvironment{enumline}{
-	\begin{vertline}\begin{enumerate}[label=---\protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
-}{
-	\end{enumerate}\end{vertline}
+	\begin{vertline}
+\begin{enumerate}[label=\raisebox{3pt}{\rule{.5cm}{0.4pt}}\protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}
+]}{\end{enumerate}
+\end{vertline}
 }
 
-\newenvironment{enumlineB}{
-	\begin{vertline}\begin{enumerate}[label=---\protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+\newenvironment{itemline}{
+	\begin{vertline}\begin{enumerate}[label=\raisebox{3pt}{\rule{.5cm}{0.4pt}}\protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
 }{
 	\end{enumerate}\end{vertline}
 }
@@ -95,7 +96,7 @@
     \usebeamerfont{institute}{\tiny {\insertshortdate}}
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.33333\paperwidth,dp=2.5ex,right,rightskip=1cm]{date}%
-   \usebeamercolor{date}{\tiny \textrm{www.socib.es}}
+   {\tiny \textrm{www.socib.es}}
   \end{beamercolorbox}}%
   \vskip0pt%
 }

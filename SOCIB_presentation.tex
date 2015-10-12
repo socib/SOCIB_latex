@@ -35,8 +35,9 @@ menucolor=black,urlcolor=white
 
 \usetheme{SOCIB}
 
-\DeclareGraphicsExtensions{.png,.PNG,.JPG,.jpg,.pdf,,.jpeg}
+\DeclareGraphicsExtensions{.png,.PNG,.JPG,.jpg,.pdf,.jpeg}
 \graphicspath{
+{./}
 }
 
 
@@ -47,7 +48,7 @@ menucolor=black,urlcolor=white
 \begin{frame}
 
 \begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,yshift=-.5pt,xshift=-3pt] at (current page.north west) {\includegraphics[height=0.45cm]{logo_socib_long}};
+\node[anchor=north west,yshift=-2pt] at (current page.north west) {\includegraphics[height=0.35cm]{logo_socib_long}};
 \end{tikzpicture}
 
 \centering
@@ -63,22 +64,39 @@ menucolor=black,urlcolor=white
 \begin{frame}[c]
 \frametitle{SLIDE TITLE}
 
-Some text
- 
+\begin{enumline}
+\item First example
+\item Second try
+\end{enumline}
+
+\hfill 
+
+\begin{itemline}
+\item 1st item
+\item 2nd item
+\end{itemline}
+
 \end{frame}
 
 %____________________________________________________________________________________________________________________________
-
+{
+%\usebackgroundtemplate{\hspace{-1cm}\tikz\node[opacity=0.75]{\includegraphics[width=1.15\paperwidth]{socib_obs}};}
 \begin{frame}[c]
 \huge
 
 \vspace{1cm}
-\shadowoffset{2pt}
+\shadowoffset{1.5pt}
 \shadowcolor{black}
-\shadowtext{Thanks} \\
-\shadowtext{for your attention}
+
+\begin{center}
+\shadowtext{Thanks for your attention}
+\vspace{1cm}
+\large
+\includegraphics[height=0.5cm]{logo_twitter}\,\shadowtext{SOCIB\_data}\\
+\includegraphics[height=0.5cm]{GitHub-Mark-Light-120px-plus}\,\shadowtext{https://github.com/socib}
+\end{center}
 
 \end{frame}
-
+}
 
 \end{document}
