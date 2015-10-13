@@ -76,13 +76,13 @@
 \newcommand{\longdash}{-\!-\!-\!-\!}
 
 \newenvironment{enumline}{
-	\begin{vertline}\begin{enumerate}[label=\longdash\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+	\begin{vertline}\begin{enumerate}[label= \longdash \protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
 }{
 	\end{enumerate}\end{vertline}
 }
 
 \newenvironment{itemline}{
-	\begin{vertline}\begin{enumerate}[label=\longdash$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+	\begin{vertline}\begin{enumerate}[label= \longdash \protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
 }{
 	\end{enumerate}\end{vertline}
 }
