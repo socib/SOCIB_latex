@@ -1,0 +1,88 @@
+\ProvidesPackage{beamerthemeSOCIB2015b} % this style was created by Philippe Dreuw
+\usepackage{marvosym}
+\usepackage{xcolor}
+\usepackage{fontspec}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setmainfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
+\setsansfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
+
+% Define custom colors, based on Tomeu's template
+\definecolor{bluesocib}{RGB}{66,175,182}  	% blue 
+\definecolor{blacksocib}{RGB}{17,31,47} 		% black	 
+\definecolor{redsocib}{RGB}{255,102,0}			% red - orange
+
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=blacksocib}
+%\setbeamercolor{title in headline}{fg=black}
+%\setbeamercolor{author in headline}{fg=darkgray}
+%\setbeamercolor{institute in headline}{fg=Grey}
+%\setbeamercolor{logo in headline}{fg=white,bg=white}
+%\setbeamercolor{separation line}{bg=black}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=white,bg=blacksocib}
+\setbeamerfont{footline}{fg=white, size=\normalsize}
+
+% body colors and fonts
+\setbeamercolor*{normal text}{fg=white,bg=blacksocib}
+
+% block environment
+\setbeamercolor*{block body}{bg=blacksocib,fg=white}
+\setbeamercolor*{block title}{fg=white}
+\setbeamercolor{caption name}{fg=bluesocib}
+
+\setbeamerfont{block title}{size=\huge,series=\bfseries}
+\setbeamerfont{block body}{size=\large}
+
+\setbeamertemplate{caption}[numbered]	
+\setbeamertemplate{items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+        \vskip4ex
+        \centering
+        
+
+% 1st column %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      
+	\usebeamercolor{title in headline}{\color{fg}\textbf{\fontsize{3.6cm}{1em}\selectfont{\inserttitle}}\\[1ex]}
+
+
+
+  \end{beamercolorbox}
+
+  \vskip2ex
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{\textwidth}{2pt}
+  \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[ht=3.5cm,leftskip=1cm,rightskip=1cm]{footline}%
+\includegraphics[height=2.5cm]{logo_socib_long}\hspace{2cm} \includegraphics[height=2.5cm]{logo_mineco}\hspace{2cm} \includegraphics[height=2.5cm]{logo_govern2}\hspace{2cm} \includegraphics[height=2.5cm]{logo_euro1} \hspace{2cm} \includegraphics[height=2.5cm]{CreativeCommons_Attribution_License} \hspace{2cm}  \raisebox{1em}{Authors: \insertauthor}
+    \vskip1ex
+  \end{beamercolorbox}
+
+%  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+%    \rule{\textwidth}{2pt}
+%  \end{beamercolorbox}
+}
+
+
+
+
