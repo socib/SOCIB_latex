@@ -1,6 +1,7 @@
 \mode<presentation>
 
 \usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
 \setmainfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
 \setsansfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
 
@@ -72,15 +73,16 @@
   {\end{mdframed}}% \end{coderule}
   
 
+\newcommand{\longdash}{-\!-\!-\!-\!}
+
 \newenvironment{enumline}{
-	\begin{vertline}
-\begin{enumerate}[label=\raisebox{3pt}{\rule{.5cm}{0.4pt}}\protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}
-]}{\end{enumerate}
-\end{vertline}
+	\begin{vertline}\begin{enumerate}[label=\longdash\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+}{
+	\end{enumerate}\end{vertline}
 }
 
 \newenvironment{itemline}{
-	\begin{vertline}\begin{enumerate}[label=\raisebox{3pt}{\rule{.5cm}{0.4pt}}\protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+	\begin{vertline}\begin{enumerate}[label=\longdash$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
 }{
 	\end{enumerate}\end{vertline}
 }

@@ -1,37 +1,27 @@
-\ProvidesPackage{beamerthemeSOCIB2015b} % this style was created by Philippe Dreuw
+\ProvidesPackage{beamerthemeSOCIBposter} % this style was created by Philippe Dreuw
 \usepackage{marvosym}
 \usepackage{xcolor}
 \usepackage{fontspec}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mode<presentation>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setmainfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
-\setsansfont[Path = /home/ctroupin/.fonts/]{Cube-Regular2}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Path = /home/ctroupin/.fonts/,Mapping=tex-text]{Cube-Regular2}
+\setsansfont[Path = /home/ctroupin/.fonts/,Mapping=tex-text]{Cube-Regular2}
+
 
 % Define custom colors, based on Tomeu's template
 \definecolor{bluesocib}{RGB}{66,175,182}  	% blue 
 \definecolor{blacksocib}{RGB}{17,31,47} 		% black	 
-\definecolor{redsocib}{RGB}{255,102,0}			% red - orange
+\definecolor{redsocib}{RGB}{255,102,0}		% red - orange
 
 
 % headline colors and fonts
 \setbeamercolor{headline}{fg=white,bg=blacksocib}
-%\setbeamercolor{title in headline}{fg=black}
-%\setbeamercolor{author in headline}{fg=darkgray}
-%\setbeamercolor{institute in headline}{fg=Grey}
-%\setbeamercolor{logo in headline}{fg=white,bg=white}
-%\setbeamercolor{separation line}{bg=black}
-
-% footline colors and fonts
 \setbeamercolor{footline}{fg=white,bg=blacksocib}
 \setbeamerfont{footline}{fg=white, size=\normalsize}
-
-% body colors and fonts
 \setbeamercolor*{normal text}{fg=white,bg=blacksocib}
-
-% block environment
 \setbeamercolor*{block body}{bg=blacksocib,fg=white}
 \setbeamercolor*{block title}{fg=white}
 \setbeamercolor{caption name}{fg=bluesocib}
@@ -51,7 +41,6 @@
         \vskip4ex
         \centering
         
-
 % 1st column %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
       
@@ -83,6 +72,36 @@
 %  \end{beamercolorbox}
 }
 
+\newcommand{\longdash}{-\!-\!-\!-\!}
 
+\newcommand{\sepblock}{\vspace*{-1cm}\rule{\columnwidth}{.2cm}}
+\newcommand{\sepblocksub}{\vspace*{-1.25cm}\rule{\columnwidth}{.1cm}}
+\newcommand{\numbox}[1]{\raisebox{-1.25cm}{\fcolorbox{bluesocib}{bluesocib}{\textcolor{white}{\,\raisebox{1cm}{\fontsize{4.cm}{1cm} #1}\,\rule{0cm}{3cm}}}}}
 
+\newcommand{\subsecnum}[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{black}{#1}};}}
+            
+\newcommand{\subsecnumsmall}[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,fill=white,draw=bluesocib,inner sep=1pt] (char) {\textcolor{black}{#1}};}}
 
+\NewDocumentEnvironment{vertline}{O{0.25em} O{-1cm} O{white}}%
+  {% \begin{coderule}[<rule width>][<rule sep>][<rule colour>]  
+    \begin{mdframed}%
+      [topline=false,rightline=false,bottomline=false,%
+       innertopmargin=5pt,innerrightmargin=0pt,innerbottommargin=5pt,%
+       skipabove=\parskip,skipbelow=0.3\baselineskip,%
+       innerleftmargin=#2,outerlinewidth=#1,linecolor=#3,backgroundcolor=blacksocib]
+  }
+  {\end{mdframed}}% \end{coderule}
+  
+\newenvironment{enumline}{
+	\begin{vertline}\begin{enumerate}[label= \longdash \protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+}{
+	\end{enumerate}\end{vertline}
+}
+
+\newenvironment{itemline}{
+	\begin{vertline}\begin{enumerate}[label= \longdash \protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+}{
+	\end{enumerate}\end{vertline}
+}
