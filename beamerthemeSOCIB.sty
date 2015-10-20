@@ -31,7 +31,7 @@
 \setbeamercolor{item projected}{fg=blacksocib,bg=white}
 \setbeamercolor{item}{bg=black,fg=bluesocib}
 \setbeamercolor{description item}{fg=bluesocib}
-\setbeamercolor{block}{fg=white}
+\setbeamercolor{block title}{fg=white}
 
 % Set size for the frame title (if larger, use \huge)
 \setbeamerfont{frametitle}{size=\LARGE}
@@ -62,12 +62,12 @@
             \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{blacksocib}{#1}};}}
 
 % Create new environments for the enumeration            
-\NewDocumentEnvironment{vertline}{O{0.25em} O{-1cm} O{white}}%
+\NewDocumentEnvironment{vertline}{O{0.2em} O{-0.5cm} O{white}}%
   {% \begin{coderule}[<rule width>][<rule sep>][<rule colour>]  
     \begin{mdframed}%
       [topline=false,rightline=false,bottomline=false,%
        innertopmargin=0pt,innerrightmargin=0pt,innerbottommargin=0pt,%
-       skipabove=0\parskip,skipbelow=0.\baselineskip,%
+       skipabove=0.25cm,skipbelow=0.\baselineskip,%
        innerleftmargin=#2,outerlinewidth=#1,linecolor=#3,backgroundcolor=blacksocib]
   }
   {\end{mdframed}}% \end{coderule}
@@ -76,13 +76,13 @@
 \newcommand{\longdash}{-\!-\!-\!-\!}
 
 \newenvironment{enumline}{
-	\begin{vertline}\begin{enumerate}[label= \longdash \protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+	\begin{vertline}\begin{enumerate}[label= \longdash \protect\subsecnum{\arabic*},font=\sffamily,leftmargin=*,labelindent=0.5cm,before=\color{white}]
 }{
 	\end{enumerate}\end{vertline}
 }
 
 \newenvironment{itemline}{
-	\begin{vertline}\begin{enumerate}[label= \longdash \protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=1cm,before=\color{white}]
+	\begin{vertline}\begin{enumerate}[label= \longdash \protect$\bullet$,font=\sffamily,leftmargin=*,labelindent=0.5cm,before=\color{white}]
 }{
 	\end{enumerate}\end{vertline}
 }
