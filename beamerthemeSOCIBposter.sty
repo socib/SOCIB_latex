@@ -20,7 +20,7 @@
 % headline colors and fonts
 \setbeamercolor{headline}{fg=white,bg=blacksocib}
 \setbeamercolor{footline}{fg=white,bg=blacksocib}
-\setbeamerfont{footline}{fg=white, size=\normalsize}
+\setbeamerfont{footline}{size=\normalsize}
 \setbeamercolor*{normal text}{fg=white,bg=blacksocib}
 \setbeamercolor*{block body}{bg=blacksocib,fg=white}
 \setbeamercolor*{block title}{fg=white}
@@ -79,7 +79,7 @@
 \newcommand{\numbox}[1]{\raisebox{-1.25cm}{\fcolorbox{bluesocib}{bluesocib}{\textcolor{white}{\,\raisebox{1cm}{\fontsize{4.cm}{1cm} #1}\,\rule{0cm}{3cm}}}}}
 
 \newcommand{\subsecnum}[1]{\tikz[baseline=(char.base)]{%
-            \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{black}{#1}};}}
+            \node[shape=circle,fill=white,draw=bluesocib,inner sep=3pt] (char) {\textcolor{blacksocib}{#1}};}}
             
 \newcommand{\subsecnumsmall}[1]{\tikz[baseline=(char.base)]{%
             \node[shape=circle,fill=white,draw=bluesocib,inner sep=1pt] (char) {\textcolor{black}{#1}};}}
