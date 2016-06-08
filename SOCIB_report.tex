@@ -1,0 +1,116 @@
+\documentclass[12pt,svgnames,final]{article}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage[justification=centering]{caption}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{url,doi}
+\usepackage{fancyhdr}
+\usepackage{datetime}
+\usepackage{titling}
+\usepackage{helvet}
+\usepackage{lastpage}
+\usepackage{sectsty}
+
+\definecolor{bluesocib}{rgb}{0.3411,0.7804,0.804}
+\sectionfont{\color{bluesocib}}  % sets colour of sections
+
+\title{Title of the document}
+\author{A.~Bcd, E.~Fgh \& I.~Jkl}
+\date{\today}
+\ddmmyyyydate
+
+\hypersetup{bookmarksopen=true,
+bookmarksnumbered=true,  
+pdffitwindow=false, 
+pdfstartview=FitH,
+pdftoolbar=true,
+pdfmenubar=true,
+pdfwindowui=true,
+pdfauthor=\theauthor,
+pdftitle=\thetitle,
+pdfsubject=SOCIB Documentation,
+bookmarksopenlevel=2,
+colorlinks=true,%
+breaklinks=true,%
+linkcolor=blue,anchorcolor=blue,%
+citecolor=blue,filecolor=blue,%
+menucolor=blue,%
+urlcolor=blue}
+
+\DeclareGraphicsExtensions{.jpg,.pdf,.png,.eps}
+\renewcommand{\captionfont}{\it \small}
+
+% LENGTH DEFINITIONS
+%-------------------------------------------------
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{22cm}
+\setlength{\headheight}{50.3pt}
+\setlength{\footskip}{45pt}
+\setlength{\hoffset}{-1cm}
+\setlength{\voffset}{-2.5cm}
+\setlength{\unitlength}{1cm}
+\setlength{\parindent}{0pt}
+\parskip 0.25cm
+
+\setcounter{tocdepth}{2}
+
+\fancyhf{}
+\lhead{ \fancyplain{}{\hspace{-1.cm}\includegraphics[height=1.25cm]{logo_socib.eps}} }
+%\rhead{ \fancyplain{}{\thetitle} }
+\cfoot{\hspace*{.9\textwidth}\sffamily \bfseries \thepage\ / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+ 
+ \fancyfoot[L]{
+    \parbox[b]{\dimexpr\linewidth\relax}{\sffamily \bfseries \hspace*{.05\textwidth}\textcolor{bluesocib}{www.socib.es} \hfill \\
+    {\color{bluesocib}\rule{\dimexpr\linewidth\relax}{2pt}}\\}
+}
+
+\fancyfootoffset{0.2\textwidth}
+
+\begin{document}
+
+\begin{titlepage}
+
+\centering
+
+\vspace*{3.5cm}
+
+{\Huge \thetitle}
+
+\vspace{1cm}
+
+\includegraphics[height=1.5cm]{logo_socib.eps}
+
+\vspace{1cm}
+
+\theauthor
+
+\vspace{1cm}
+{\normalsize \thedate}
+
+\end{titlepage}
+
+This document present\ldots
+
+\tableofcontents
+
+\newpage
+
+\pagestyle{fancy}
+
+\section{First section}
+
+\subsection{First sub section}
+
+Here it seems there are two distinct topics:
+\begin{itemize}
+\item The quality control of data (QC). 
+\item The quality control of our work (applications, visualisations, \ldots)
+\end{itemize}
+
+
+
+\end{document}
