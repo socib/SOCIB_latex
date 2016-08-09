@@ -28,6 +28,11 @@ citecolor=blue,filecolor=black,%
 menucolor=black,urlcolor=white
 }
 
+\makeatletter%
+\special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
+\makeatother%
+
+
 \author[Short author list]{Author list}
 \institute[SOCIB]{Balearic Islands Coastal Observing and Forecasting System}
 \title[Short title]{Long title}
@@ -39,7 +44,6 @@ menucolor=black,urlcolor=white
 \graphicspath{
 {./}
 }
-
 
 \begin{document}
 

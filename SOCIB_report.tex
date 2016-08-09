@@ -17,6 +17,10 @@
 \definecolor{bluesocib}{rgb}{0.3411,0.7804,0.804}
 \sectionfont{\color{bluesocib}}  % sets colour of sections
 
+\makeatletter%
+\special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
+\makeatother%
+
 \title{Title of the document}
 \author{A.~Bcd, E.~Fgh \& I.~Jkl}
 \date{\today}

@@ -15,6 +15,9 @@
 \usetikzlibrary{fadings,shapes.arrows,shadows}   
 \usepackage[framemethod=tikz]{mdframed}
 
+\makeatletter%
+\special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
+\makeatother%
 
 \renewcommand{\captionfont}{\it \small}
 \urlstyle{sf}
