@@ -1,0 +1,269 @@
+\documentclass[10pt,landscape]{article}
+\usepackage[table]{xcolor}
+%\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[justification=centering]{caption}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{titlesec}
+\usepackage{times}
+\usepackage{datetime}
+\usepackage{wasysym}
+\usepackage{multicol}
+
+\hypersetup{bookmarksopen=true,
+bookmarksnumbered=true,  
+pdffitwindow=false, 
+pdfstartview=FitH,
+pdftoolbar=true,
+pdfmenubar=true,
+pdfwindowui=true,
+pdfauthor=Charles Troupin,
+pdftitle=List of SOCIB data and products for AEMET,
+bookmarksopenlevel=2,
+colorlinks=true,%
+breaklinks=true,%
+colorlinks=true,%
+linkcolor=blue,anchorcolor=blue,%
+citecolor=blue,filecolor=blue,%
+menucolor=blue,%
+urlcolor=blue}
+
+% LENGTH DEFINITIONS
+\setlength{\textwidth}{26.5cm}
+\setlength{\textheight}{23cm}
+\setlength{\headheight}{50.3pt}
+\setlength{\footskip}{45pt}
+\setlength{\hoffset}{-7.25cm}
+\setlength{\voffset}{-5.5cm}
+\setlength{\unitlength}{1cm}
+\setlength{\parindent}{0pt}
+\parskip 0.cm
+
+\newcommand{\data}{$\bullet$}
+\newcommand{\datad}{$\circ$}
+\newcommand{\mobile}{$\leftrightarrows$}
+\definecolor{lightgray1}{gray}{0.97}
+\definecolor{lightgray2}{gray}{0.90}
+
+\titlespacing{\section}{0pt}{\parskip}{-0.5\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-5\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+
+\begin{document}
+
+\parbox{.6\textwidth}{\section*{SOCIB Meteorological and Oceanic Data}} \hfill \parbox{.1\textwidth}{\includegraphics[width=1.cm]{logo_socib_square}}
+
+%\parbox{.5\textwidth}{\section*{SOCIB Meteorological and Oceanic data}}\hspace{1cm}\parbox{.2\textwidth}{Last modified: \today,~\currenttime} \hfill \parbox{.2\textwidth}{\includegraphics[width=2.5cm]{logoSocib.jpg}}
+
+
+\parbox{.35\textwidth}{\subsection*{Atmosphere}}\hfill \parbox{.7\textwidth}{\data\, denotes data available in near real-time \,\, \datad\, denotes data available in delayed mode \,\, \mobile\, denotes mobile platforms}
+\vspace{-5mm}
+\begin{table}[H]
+\rowcolors{4}{lightgray1}{lightgray2}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll|cccc|ccc|cc|c}
+\toprule
+\textbf{Variables}			& \textbf{Units}			&		\multicolumn{10}{c}{\textbf{Platforms}}									\\
+\midrule
+					&				& \multicolumn{4}{c|}{Weather stations}	&	\multicolumn{3}{c|}{Coastal stations / beach monitoring}			& \multicolumn{2}{c|}{Moorings}		& R/V SOCIB \\
+					&				& Salines & Parc Bit & Puig Galfi & Esporles	& Son Bou & Playa Palma & Cala Millor 	& Canal Ibiza & Bahia Palma 	&		\mobile	\\
+\midrule
+
+Air temperature			& $^{\circ}$C				& \datad & \data & \data & \data	& \data & \data & \data	& \data & \data	& \data\\ 
+Wind direction			& degree					& \datad & \data & \data & \data	& \data & \data & \data	& \data & \data	& \data\\ 
+Wind speed				& m\,s$^{-1}$				& \datad & \data & \data & \data	& \data & \data & \data	& \data & \data	& \data\\ 
+Wind gust				& m\,s$^{-1}$				& \datad & \data & \data & \data	& \data & \data & \data	& \data & \data	& \\ 
+Air pressure				& hPa						& \datad & \data & \data & \data	& \data & \data & \data	& \data & \data & \data	\\ 
+Surface net downward radiative flux & W\,m$^{-2}$	& \datad & \data & \data & \data	& \data & \data & \data	& \data & \data	& \\ 
+Relative humidity		& \%						& \datad & \data & \data & \data	& \data & \data & \data	& \data & \data	& \data \\ 
+Rain intensity			& mm\,h$^{-1}$				&  & \data & \data & \data	& \data & \data & \data	& 	 & 	&\\ 
+Rain duration			& s							&  & \data & \data & \data	& \data & \data & \data	& 	 & 	&\\ 
+Rain accumulation		& mm						&  & \data & \data & \data & \data & \data & \data	& 	 & 	&\\ 
+Rain peak intensity		& mm\,h$^{-1}$				&  & \data & \data & \data	& \data & \data & \data	& 	 & 	&\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+
+\vspace{-0.25cm}
+
+\subsection*{Air-sea interface (ocean surface)}
+
+\vspace{-0.25cm}
+
+\begin{table}[H]
+\rowcolors{4}{lightgray1}{lightgray2}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll|cccc|cccc|cc|c}
+\toprule
+\textbf{Variables} 			& \textbf{Units}			&	\multicolumn{8}{c}{\textbf{Platforms}}					\\
+\midrule
+					&		& \multicolumn{4}{c|}{Coastal Stations}	&	\multicolumn{4}{c|}{Sea level stations}& \multicolumn{2}{c|}{Moorings}		& Drifters\\	
+					&		& Son Bou  & Playa Palma  & Cala Millor  & La Mola & Andratx & Pollen\c{c}a & Sa Rapita & Sant Antoni	& Bahia de Palma & Canal de Ibiza	& \mobile\\	
+\midrule
+Wave height			& m					& \datad & \datad	& \datad	& 		&  		&  		& 	&	& \data	& \data	&			\\ 
+Wave period			& s					& \datad & \datad	& \datad	& 		&  		&  		&	&	& \data	& \data	&			\\ 
+%Wave mean directional dispersion & degree 	& \datad & \datad	& \datad	& 		&  		&  		&	&	& \data	& \data	&			\\ 
+Sea level			& m 					&  		&  		&		& 		& \data	& \data	& \data	& \data	&	&  		&			\\ 		
+Air pressure		& hPa					& 		&  		&		& \data 	& \data	& \data	& \data	& \data	&	&  		&			\\	
+Water pressure		& psi				&  		&  		&		& 		& \data	& \data	& \data	&	&	&  		&			\\	 
+Water Temperature	& $^{\circ}$C		&  		&  		&		& 		& \data	& \data	& \data	&	&	&  		&	\data	\\		
+%Water Salinity		& PSU				&  		&  		&		& 		& \data	& \data	& \data	&	&	&  		&	\data	\\	
+Current velocity 	& m\,s$^{-1}$		& \datad & \datad	& \datad	& \data	&  		&  	&	&		& \data	& \data	&	\data	\\
+Current direction 	& degree				& \datad & \datad	& \datad	& \data	&  		&  	&	&		& \data	& \data	&	\data	\\	
+Platform velocity	& m\,s$^{-1}$		&  		& 	 	&		& 		&  		&   &		&		&  		& 		&	\data	\\
+Platform direction	& degree				&  		& 		&		& 		&  		&  	&	&		&  		& 		&	\data	\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\vspace{-0.25cm}
+
+\subsection*{Ocean interior} 
+
+\vspace{-0.25cm}
+
+\begin{table}[H]
+\rowcolors{4}{lightgray1}{lightgray2}
+\begin{tabular*}{.875\textwidth}{@{\extracolsep{\fill}}ll|c|cc|c|c|c}
+\toprule
+\textbf{Variables}& \textbf{Units}	&	\multicolumn{6}{c}{\textbf{Platforms}}					\\
+\midrule
+				&				& Coastal station	& \multicolumn{2}{c|}{Moorings}	& Argo profilers		& Glider 	& R/V SOCIB \\
+				&				& La Mola 			& Bahia de Palma & Canal de Ibiza	& \mobile	& \mobile	& \mobile 	  \\
+
+\midrule
+
+Water temperature						& $^{\circ}$C				& \datad& \data & \data	& \data & \data	& \datad	\\
+Water salinity							& PSU						& \datad& \data & \data	& \data & \data	& \datad	\\
+Current velocity / direction (ADCP)	& m\,s$^{-1}$ / degree		& \datad& \data	& \data	&  		& 		& \datad	\\
+Platform velocity / direction (Lagrangian)	& m\,s$^{-1}$ / degree	&		& 		& 		& \data	& \data	& 		\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\newpage
+
+\begin{multicols}{2}
+
+\subsection*{Gliders}
+\begin{table}[H]
+\rowcolors{2}{lightgray1}{lightgray2}
+\begin{tabular}{lllll}
+\toprule
+Glider Type		& Unit No.	& Name		& WMO	& owned by \\
+\midrule
+Seaglider		& SG538		& sdeep02	& 68965	& SOCIB\\
+Slocum deep		& SL132		& ideep02	& 68966	& IMEDEA (CSIC-UIB)\\
+Slocum deep		& SL244		& sdeep01	& 68967	& SOCIB\\
+Slocum coastal 	& SL050		& icoast00	& 68968	& IMEDEA (CSIC-UIB)\\
+Seaglider		& SG541		& sdeep03	& 68969	& SOCIB\\
+Slocum deep		& SL184		& ideep00	& 68452	& IMEDEA (CSIC-UIB)\\
+Slocum deep		& SL243		& sdeep00	& 68457	& SOCIB\\
+Slocum deep		& SL131		& ideep01	& 68996	& IMEDEA (CSIC-UIB)\\
+Slocum deep G2 	& SL567		& sdeep04	& 68997	& SOCIB\\
+Slocum deep G2 	& SLL568		& sdeep05	& 68998	& SOCIB\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+
+\subsection*{Surface drifters}
+\begin{table}[H]
+\rowcolors{2}{lightgray1}{lightgray2}
+\begin{tabular}{llll}
+\toprule
+Argos No.	&	WMO		& Start date & End date\\
+131972		& 	62904	& 25/05/2014	 & 01/01/2015 \\
+131973		&	62905	& 25/05/2014	 & 14/06/2014 \\
+131974		& 	62906	& 28/05/2014	 & 10/03/2015 \\
+131975		& 	62907	& 25/05/2014	 & 31/03/2015 \\
+134924		& 	62908	& 25/05/2014	 & 11/08/2014 \\
+134926		& 	62910	& 25/05/2014	 & 30/09/2015 \\ 
+134927		& 	62927	& 25/05/2014	 & 13/07/2015 \\
+134929		& 	62929	& 25/05/2014	 & 17/08/2014 \\
+134931		& 	62931	& 25/05/2014	 & 18/07/2015 \\
+136010		& 	62932	& 25/05/2014	 & 02/12/2015 \\
+136011		& 	62933	& 25/05/2014	 & 25/06/2014 \\
+136013		& 	62935	& 25/05/2014	 & 19/03/2015 \\
+136014		& 	62936	& 25/05/2014	 & 09/08/2014 \\
+136016		& 	62938	& 25/05/2014	 & 05/06/2014 \\
+127159		& 	6101603	& 25/05/2014	 & 02/01/2015 \\
+127160		& 	6101604	& 25/05/2014	 & 10/03/2015 \\
+127161		& 	6101605	& 25/05/2014	 & 21/07/2014 \\
+127162		& 	6101606	& 25/05/2014	 & 01/06/2014 \\
+127163		& 	6101607	& 25/05/2014	 & 08/06/2014 \\
+127164		& 	6101608	& 25/05/2014	 & 10/10/2014 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\columnbreak
+
+\subsection*{ARGO profilers}
+\begin{table}[H]
+\rowcolors{2}{lightgray1}{lightgray2}
+\begin{tabular}{llrr}
+\toprule
+Unit No.			& WMO code	& Start date	 & End date \\
+\midrule
+IME\_APEX003		& 6900660	& 07/09/2011	 & ongoing \\
+IME\_APEX001		& 6900659	& 12/03/2012	 & ongoing \\
+IME\_APEX002		& 6900662	& 09/06/2012	 & ongoing \\
+SCB\_APEX001		& 6900786	& 12/08/2012	 & ongoing \\
+SCB\_APEX002		& 6900788	& 01/05/2013	 & ongoing \\
+SCB\_APEX003		& 6900787	& 20/06/2013	 & ongoing \\
+SCB\ ARVORI001	& 6901245	& 21/11/2014	 & ongoing \\
+SCB\_APEX005		& 6901243	& 22/11/2014	 & ongoing \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Mooring}
+\begin{table}[H]
+\rowcolors{2}{lightgray1}{lightgray2}
+\begin{tabular}{llrr}
+\toprule
+Name/location	& WMO code	& Start date	 & End date \\
+\midrule
+Canal de Ibiza	& 61141		& 06/2013		& ongoing \\ 
+Baia de Palma	& 61499		& 05/2012		& ongoing \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Research vessel missions}
+\begin{table}[H]
+\rowcolors{2}{lightgray1}{lightgray2}
+\begin{tabular}{llll}
+\toprule
+Mission Unique identifier	& Start date			& End date			& Institute \\
+\midrule
+SOCIB\_Canales\_Dec2013		& 	12/02/2013 		& 12/9/2013 	& SOCIB	\\
+SOCIB\_Canales\_Feb2014		& 	02/17/2014 		& 2/19/2014 	& SOCIB	\\
+SOCIB\_Canales\_May2014		& 	05/06/2014 		& 5/9/2014 	& SOCIB	\\
+SOCIB-Jellyfish\_May14		& 	05/13/2015 		& 5/15/2015	& SOCIB	\\	
+PERSEUS\_EPR\_ALBOREX\_May2014	& 05/25/2014 	& 6/2/2014 	& SOCIB	\\
+SOCIB\_Canales\_Nov2014		& 	11/25/2014 		& 12/3/2015 	& SOCIB	\\
+SOCIB\_Canales\_Apr2015		& 	04/23/2015 		& 4/27/2015 	& SOCIB	\\
+SOCIB-SHEBEX-MAY2015			& 	05/05/2015 		& 5/11/2015	& SOCIB	\\
+SOCIB-Jellyfish\_May15		& 	05/19/2015 		& 5/22/2015 	& SOCIB	\\		
+\midrule
+RADMED\_0313					& 	15/03/2013		& 5/4/2013	& IEO \\
+RADMED\_PERSEUS\_0613		& 	11/06/2013		& 19/6/2013	& IEO \\
+RADMED\_PERSEUS\_0614		& 	10/06/2014		& 16/6/2014	& IEO \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{multicols}
+
+\end{document}
