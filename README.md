@@ -11,6 +11,9 @@ The FF Cube font has to be installed (_Cube-Regular.ttf_ or _Cube-Regular2.otf_)
 
 The report can be compiled with ordinary latex, as normal font (no ttf) is used in it. You only need to have the logo somewhere.
 
+<img src="https://cloud.githubusercontent.com/assets/11868914/17511990/eba22b08-5e25-11e6-8386-e7f5e6c5f24a.jpg" title='Report', width="500">
+
+
 ## Presentation 
 
 * _SOCIB_presentation.tex_ is the template for a presentation. This file contains a basic example.
