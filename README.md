@@ -7,6 +7,10 @@ For the posters and presentations, the .tex files have to be compiled using [xel
 
 The FF Cube font has to be installed (_Cube-Regular.ttf_ or _Cube-Regular2.otf_) in ~/.fonts directory or in another directory that can be found by the latex.
 
+## Report
+
+The report can be compiled with ordinary latex, as normal font (no ttf) is used in it. You only need to have the logo somewhere.
+
 ## Presentation 
 
 * _SOCIB_presentation.tex_ is the template for a presentation. This file contains a basic example.
