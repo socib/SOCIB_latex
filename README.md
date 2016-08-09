@@ -1,9 +1,11 @@
-# SOCIB template latex
-LaTeX source files for posters and presentations, following examples provided in ppt.
+# SOCIB latex
+LaTeX source files for posters, presentations (following templates provided in ppt), as well as other misc documents.
 
-The .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki/XeTeX) in order to get the same font as in the ppt (_FF Cube_). 
+## Compilation
 
-The FF Cube font has to be installed (_Cube-Regular.ttf_ or _Cube-Regular2.otf_) in ~/.fonts directory.
+For the posters and presentations, the .tex files have to be compiled using [xelatex](https://en.wikipedia.org/wiki/XeTeX) in order to get the same font as in the powerpoint templates (_FF Cube_). 
+
+The FF Cube font has to be installed (_Cube-Regular.ttf_ or _Cube-Regular2.otf_) in ~/.fonts directory or in another directory that can be found by the latex.
 
 ## Presentation 
 
@@ -21,3 +23,7 @@ The FF Cube font has to be installed (_Cube-Regular.ttf_ or _Cube-Regular2.otf_)
 * _beamerthemeSOCIBposter.sty_ is where all the configuration for the style is done.
 
 ![alt text](https://cloud.githubusercontent.com/assets/11868914/10455396/42530038-71bb-11e5-9874-8c72c2d73f87.png "Template for an almost empty poster")
+
+## Misc
+
+Other documents that can be useful to keep.
